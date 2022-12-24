@@ -6,7 +6,7 @@ void FaceMakeup();
 void EyeMakeup();
 void Lipmakeup();
 
-void Foundation();  // please add all helper functions name here to summarise (category wise)
+void Foundation();  
 void Powder();
 void 
 struct UserDetail {
@@ -16,11 +16,11 @@ struct UserDetail {
 
 int main() {
     int choice;
-    printf(" <<write welcome message here>> ");  // you can write this or skip
+    printf(" <<write welcome message here>> ");  
     printf("enter name ");
     scanf("%s",&user1.name);
     while(1) {
-        printf("<<add>>");      // menu me choice vs option add add karde like 1. Facemakeup 2. eyemakeup
+        printf("<<add>>");      
         printf("enter choice : ");  
         scanf("%d",&choice);
         switch(choice) {
@@ -43,7 +43,7 @@ void FaceMakeup() {
     int choice;
         while(1) {
         printf("heyy %s enter a category of facemakeup",user1.name);
-        scanf("%d",&choice);                // menu me choice vs option add add karde like 1. Facemakeup 2. eyemakeup
+        scanf("%d",&choice);                
         switch (choice)
         {
         case 1 : Foundation();
@@ -70,7 +70,7 @@ void EyeMakeup() {
     int choice;
         while(1) {
         printf("heyy %s enter a category of eyemakeup \n
-        f for foudation // continue",user1.name);               // menu me choice vs option add add karde like 1. Facemakeup 2. eyemakeup
+        f for foudation 
         scanf("%d",&choice);
         switch (choice)
         {
