@@ -6,21 +6,21 @@ void FaceMakeup();
 void EyeMakeup();
 void Lipmakeup();
 
-void Foundation();  
+void Foundation();  // please add all helper functions name here to summarise (category wise)
 void Powder();
 void 
 struct UserDetail {
     char name[40];
     
-}user1;
+}*user;
 
 int main() {
     int choice;
-    printf(" <<write welcome message here>> ");  
+    printf(" <<write welcome message here>> ");  // you can write this or skip
     printf("enter name ");
-    scanf("%s",&user1.name);
+    scanf("%s",&user->name;);
     while(1) {
-        printf("<<add>>");      
+        printf("<<add>>");      // menu me choice vs option add add karde like 1. Facemakeup 2. eyemakeup
         printf("enter choice : ");  
         scanf("%d",&choice);
         switch(choice) {
@@ -32,7 +32,7 @@ int main() {
                     break;
             case 4: exit(0);
                     break;
-            default: printf("heyy %s please enter a valid choice",user1.name);
+            default: printf("heyy %s please enter a valid choice",user->name);
         }
     }
 
@@ -43,7 +43,7 @@ void FaceMakeup() {
     int choice;
         while(1) {
         printf("heyy %s enter a category of facemakeup",user1.name);
-        scanf("%d",&choice);                
+        scanf("%d",&choice);                // menu me choice vs option add add karde like 1. Facemakeup 2. eyemakeup
         switch (choice)
         {
         case 1 : Foundation();
@@ -66,11 +66,50 @@ void FaceMakeup() {
     }
 }
 
+void Foundation() {
+    int choice;
+    printf("Enter your shade \n 1. fair 2. light 3. light to medium 4. medium 5. rich")
+    scanf("%d",&choice);
+    switch (choice)
+    {
+    case 1: if(texture==1) {
+        printf("Maybelline New York Fitme Matte+Poreless Liquid Foundation in 115 IVORY ");
+        }
+        else {
+            printf("Maybelline fitme dewy in 115 IVORY");
+        }
+        break;
+    case 2: if(texture==1) {
+            printf("Maybelline fitme matte in 128 Warm Nude");
+        }
+        
+        break;
+    case 3: if(texture==1) {
+        printf("Maybelline fitme matte in 220 Natural Beige");
+        }
+        
+        break;
+    case 4: if(texture==1) {
+        printf("Maybelline fitme matte in 235 pure Beige");
+        }
+        
+        break;
+    case 5: if(texture==1) {
+        printf("Maybelline fitme matte in 330 Toffee");
+        }
+        
+            break;
+    default: printf("please enter correct shade from options provided");
+        break;
+    }
+}
+
+
 void EyeMakeup() {
     int choice;
         while(1) {
         printf("heyy %s enter a category of eyemakeup \n
-        f for foudation 
+        f for foudation // continue",user1.name);               // menu me choice vs option add add karde like 1. Facemakeup 2. eyemakeup
         scanf("%d",&choice);
         switch (choice)
         {
