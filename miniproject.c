@@ -16,12 +16,18 @@ void Contour();
 void Highlighter();
 void SettingSpray();
 
+// Helper Functions for EyeMakeup()
+void Eyeliner();
+void EyeBrowDef();
+void Mascara();
+void EyeShadow();
+
 struct UserDetail {
     char name[40];
     
 }*user;
 
-int main() {
+int main() {        // leave main function for last dont put effort now
     struct UserDetail user1;
     user = &user1;
     int choice;
@@ -383,23 +389,13 @@ void SettingSpray() {
     }
 }
 
-//till here do it 
-
-
-
-
-
-
-
-
-
-
 
 
 void EyeMakeup() {
     int choice;
         while(1) {
-        printf("heyy %s enter a category of eyemakeup \n 1. eyeliner 2. eyebrow definer 3. mascara 4. eyeshadow ",user->name);               // menu me choice vs option add add karde like 1. Facemakeup 2. eyemakeup
+        printf("heyy %s enter a category of eyemakeup \n 1. eyeliner 2. eyebrow definer 3. mascara 4. eyeshadow ",user->name);              
+         // menu me choice vs option add add karde like 1. Facemakeup 2. eyemakeup
         scanf("%d",&choice);
         switch (choice)
         {
@@ -419,7 +415,7 @@ void EyeMakeup() {
 
 // Eye liner
 void EyeLiner() {
-    int choice,finish;
+    int choice,finish,i;
     printf("%s, choose your preferred formulation  \n 1. retractable kajal 2.kohl 3. sketch liner 4. liquid liner 5. gel liner \n");
     scanf("%d",&choice);
     switch (choice)
@@ -437,7 +433,11 @@ void EyeLiner() {
         
         
         break;
-    case 4: while(1) {
+    case 4: for(i=0;i<=5;i++) {
+                if(i==5) {
+                    printf("%s, you have completed 5 unsucessful trials, going back to eye makeup menu");
+                    return;
+                }
                 printf("what is your perferred finish of liquid eyeliner 1. matte finish 2. glossy finish \n");
                 scanf("%d",&finish);
                 if(finish == 1) {
@@ -458,14 +458,109 @@ void EyeLiner() {
         
         break;
     
-    default: printf("the option you have entered does not exist, going back to face makeup menu");
+    default: printf("the option you have entered does not exist, going back to eye makeup menu");
         return;
     }
 }
 
+//eyebrow definer
+void EyeBrowDef() {
+    int choice;
+    printf("%s, choose your preferred formulation  \n 1. retractable eyebrow definer 2.pencil eyebrow definer 3. eyebrow mascara \n",user->name);
+    scanf("%d",&choice);
+    switch (choice)
+    {
+    case 1: printf("\n You can checkout these 2 options :\n Maybelline New York Define & Blend Brow Pencil \n
+                Maybelline New York Tattoo Brow Pencil \n");      // everything printf in this format
+        
+              break;
+    case 2: 
+            printf("\n You can checkout :\n Maybelline New York Fashion Brow Cream Pencil \n"); 
+        
+        
+        break;
+    case 3: 
+        printf("\n You can checkout :\n Maybelline New York Tattoo Brow 3 Day Styling Brow Gel \n");
+    
+        
+        break;
+    default: printf("the option you have entered does not exist, going back to eye makeup menu");
+        return;
+    }
+}
 
+void helperMascara(int finish) {
+    if(finish ==0 ) {
+        printf("Waterproof");
+    }
+    else {
+        printf("")
+    }
+}
+// mascara
+//eyebrow definer
+void Mascara() {
+    int choice,finish,i;
+    printf("%s, What is your expectation from mascara, choose an option  \n
+     1. Curling 2.Volumnising 3. both curling and volumnising 4. false eyelash effect \n",user->name);
+    scanf("%d",&choice);
+    printf("would you prefer waterproof (enter 1) or washable (enter any number) ?  ");
+    scanf("%d",&finish);
+    switch (choice)
+    {
+    case 1: if(finish == 1) {
+                printf("\n You can checkout :\n Maybelline New York The Collosal Mascara - Waterproof ");
+            }
+            else {
+                printf("\n You can checkout :\n Maybelline New York The Collosal Volum Mascara - Washable");
+            }
+          // everything printf in this format
+        
+              break;
+    case 2: if(finish == 1) {
+                printf("\n You can checkout :\n Maybelline New York Hyper Curl Mascara - Waterproof Very Black \n");
+            }
+            else {
+                printf("\n You can checkout :\n Maybelline New York Hyper Curl Mascara - Washable Very Black");
+            }
+        
+        
+        break;
+    case 3: if(finish == 1) {
+                printf("\n You can checkout :\n Maybelline New York Lash Sensantional Waterptoof Mascara Black \n");
+            }
+            else {
+                printf("\n You can checkout :\n Maybelline New York Lash Sensantional Washable Mascara Black \n");         
+            } 
+            break;
+    case 3: if(finish == 1) {
+                printf("\n You can checkout :\n Maybelline New York Lash Sensantional Waterptoof Mascara Black \n");
+            }
+            else {
+                printf("\n You can checkout :\n Maybelline New York Lash Sensantional Washable Mascara Black \n");         
+            } 
+            break;
+    case 4: if(finish == 1) {
+                printf("\n You can checkout :\n Maybelline New York Falsies Lash Lift Mascara - Very Black \n");
+            }
+            else {
+                printf("\n You can checkout :\n Maybelline New York Falsies Lash Lift Mascara - Very Black \n
+                Unfortunately it is not available in Washable variant as of now \n");      
+            } 
+            break;
+    default: printf("the option you have entered does not exist, going back to eye makeup menu");
+        return;
+    }
+}
 
-
+// do till hereeeeee............
+                       
+                       
+//eyeshadow
+void EyeShadow() {
+    
+    
+}
 
 
 
