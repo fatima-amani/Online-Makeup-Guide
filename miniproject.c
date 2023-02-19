@@ -389,6 +389,17 @@ void SettingSpray() {
     }
 }
 
+//till here do it 
+
+
+
+
+
+
+
+
+
+
 
 
 void EyeMakeup() {
@@ -553,15 +564,30 @@ void Mascara() {
     }
 }
 
-// do till hereeeeee............
-                       
-                       
+
 //eyeshadow
 void EyeShadow() {
+    int choice,finish,i;
+    printf("%s, What is your preference for colour story in eyeshadow palette, choose an option  \n
+     1. Browns 2.Pinks \n",user->name);
+    scanf("%d",&choice);
+    switch (choice)
+    {
+    case 1: printf("\n You can checkout :\n Maybelline New York City Mini Palette Eye Shadow ");
+            
+          // everything printf in this format
+        
+              break;
+    case 2: printf("\n You can checkout :\n Maybelline New York The Blushed Nudes Eye Shadow Palette \n");
+            
+                   
+        
+        break;
+    default: printf("the option you have entered does not exist, going back to eye makeup menu");
+        return;
     
-    
+    }
 }
-
 
 
 
@@ -574,8 +600,8 @@ void EyeShadow() {
 void LipMakeup() {
     int choice;
         while(1) {
-        printf("heyy %s enter a category of eyemakeup \n
-        f for foudation // continue",user1.name);               // menu me choice vs option add add karde like 1. Facemakeup 2. eyemakeup
+        printf("heyy %s, which type of lipstick do you want \n
+        1. liquid lipstick 2. ",user1.name);               // menu me choice vs option add add karde like 1. Facemakeup 2. eyemakeup
         scanf("%d",&choice);
         switch (choice)
         {
@@ -590,8 +616,57 @@ void LipMakeup() {
         case 8 : return;
         case 9 : exit(0);
             break;
-        default: printf("enter a correct choice");
+        default: printf("\n the option you have entered does not exist, going back to eye makeup menu \n");
             break;
         }
     }
+}
+
+//Liquid Lipstick
+void LiquidLipstick() {
+     int choice,finish,i;
+    printf("%s, What is your preferred colour, choose an option  \n
+     1. Brown 2.Pink 3.red 4. nude 5. wine 6. purple \n",user->name);
+    scanf("%d",&choice);
+    switch (choice)
+    {
+    case 1: printf("You can checkout :\n Maybelline New York Super Stay Matte Ink Liquid Lipstick - 135 Globe Trotter \n");
+            
+          // everything printf in this format
+        
+              break;
+    case 2: printf("\n You can checkout :\n Maybelline New York Super Stay Matte Ink Liquid Lipstick - 120 Artist \n");
+            
+                   
+        
+        break;
+    case 3 : printf("\n You can checkout :\n Maybelline New York Super Stay Matte Ink Liquid Lipstick - 20 Pioneer \n");
+            
+                   
+        
+        break;
+    case 4 : printf("\n You can checkout :\n MMaybelline New York Super Stay Matte Ink Liquid Lipstick - 70 Amazonian \n");
+            
+                   
+        
+        break;
+    case 5 : printf("\n You can checkout :\n Maybelline New York Super Stay Matte Ink Liquid Lipstick - 50 Voyager \n");
+            
+                   
+        
+        break;
+    case 1: printf("You can checkout :\n Maybelline New York Super Stay Matte Ink Liquid Lipstick - 15 Lover \n");
+            
+          // everything printf in this format
+        
+              break;
+    default: printf("the option you have entered does not exist, going back to eye makeup menu");
+        return;
+    
+    }
+}
+
+// bullet lipstick
+void BulletLipstick() {
+    
 }
