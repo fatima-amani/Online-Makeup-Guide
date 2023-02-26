@@ -29,7 +29,6 @@ void LipGloss();
 
 struct UserDetail {
     char name[40];
-    
 }*user;
 
 int main() {   
