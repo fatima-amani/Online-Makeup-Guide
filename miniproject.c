@@ -33,15 +33,20 @@ struct UserDetail {
 }*user;
 
 int main() {   
-    int choice;     // leave main function for last dont put effort now
+    int choice;  
     struct UserDetail user1;
     user = &user1;
-    printf(" <<write welcome message here>> ");  // you can write this or skip
-    printf("enter name ");
+    printf("\t\t--------------------------------------------------------------------------\n");
+    printf("\t\t|\t\t\t ONLINE MAKEUP GUIDE \t\t\t\t|\t"); 
+    printf("\n\t\t--------------------------------------------------------------------------\n");
+    printf("\n Please enter your name \n");
     scanf("%s",&user->name);
     while(1) {
-        printf("<<add>>");      // menu me choice vs option add add karde like 1. Facemakeup 2. eyemakeup
-        printf("enter choice : ");  
+        printf("OPTIONS TO CHOOSE\n");
+        printf("1. Face Makeup\n"); 
+        printf("2. Eye Makeup\n");
+        printf("3. Lip Makeup\n");
+        printf("enter choice : \n");  
         scanf("%d",&choice);
         switch(choice) {
             case 1: FaceMakeup();
@@ -62,8 +67,17 @@ int main() {
 void FaceMakeup() {
     int choice;
     while(1) {
-        printf("heyy %s enter a category of facemakeup",user->name);
-        scanf("%d",&choice);                // menu me choice vs option add add karde like 1. Facemakeup 2. eyemakeup
+        printf("\nHeyy %s!!!! \nEnter a category of facemakeup\n",user->name);
+        printf("Categories we have:\n");
+        printf("1. Primer\t");
+        printf("\t2. Foundation\n");
+        printf("3. Concealer\t");
+        printf("\t4. LoosePowder\n");
+        printf("5. Blush\t");
+        printf("\t6. Contour\n");
+        printf("7. Highlighter\t");
+        printf("\t8. SettingSpray\n");
+        scanf("%d",&choice);      
         switch (choice)
         {
         case 1 : Primer();
@@ -91,275 +105,253 @@ void FaceMakeup() {
 //primer
 void Primer() {
     int choice;
-    printf("you can buy it in 2 finish : 1. Matte finish 2. dewy finish");
+    printf("Primers basically have 2 type of finishes\n");
+    printf("1. Matte finish\t 2. Dewy finish\n");
     scanf("%d",&choice);
     switch (choice)
     {
-    case 1: printf("\n %s, You can checkout :\n  Maybelline New York Fit me Primer - Matte + Poreless \n",user->name); // everything in this format
-        
-        
-        break;
-    case 2: printf("\n %s, You can checkout :\n  Maybelline New York Fit me Primer - Dewy + Smooth \n",user->name);
-        
-        
-        break;
-    default: printf("the option you have entered does not exist, going back to face makeup menu");
+    case 1: printf("\nYou can checkout :\n  Maybelline New York Fit me Primer - Matte + Poreless \n\n");
+            printf("Redirecting to Face makeup menu\n\n");
+            break;
+
+    case 2: printf("\nYou can checkout :\n  Maybelline New York Fit me Primer - Dewy + Smooth \n\n");
+            printf("Redirecting to Face makeup menu\n\n");
+            break;
+
+    default: printf("the option you have entered does not exist, Redirecting to Face makeup menu\n");
         return;
     }
 }
 
-// function complete just beautify
+//foundation
 void Foundation() {
     int choice;
-    printf("Enter your shade \n 1. fair 2. light 3. light to medium 4. medium 5. rich ");
+    printf("Select your shade:\n 1. fair\t 2. light\t 3. light to medium\t 4. medium\t 5. rich\n ");
     scanf("%d",&choice);
     switch (choice)
     {
-    case 1: printf("\n You can checkout :\n  Maybelline New York Fit me Matte+Poreless Liquid Foundation in 115 IVORY \n"); // everything in this format
+    case 1: printf("\nYou can checkout :\n  Maybelline New York Fit me Matte+Poreless Liquid Foundation in 115 IVORY \n");
+            printf("Redirecting to Face makeup menu\n\n"); 
+            break;
         
-        
-        break;
-    case 2: printf("Maybelline fitme matte in 128 Warm Nude");
-        
-        
-        break;
-    case 3: 
-        printf("Maybelline fitme matte in 220 Natural Beige");
-        
-        
-        break;
-    case 4: 
-        printf("Maybelline fitme matte in 235 pure Beige");
-        
-        
-        break;
-    case 5: 
-        printf("Maybelline fitme matte in 330 Toffee");
-        
-        break;
-    default: printf("the option you have entered does not exist, going back to face makeup menu");
+    case 2: printf("\nYou can checkout :\n Maybelline fitme matte in 128 Warm Nude\n");
+            printf("Redirecting to Face makeup menu\n\n");
+            break;
+
+    case 3: printf("\nYou can checkout :\n Maybelline fitme matte in 220 Natural Beige\n");
+            printf("Redirecting to Face makeup menu\n");
+            break;
+
+    case 4: printf("\nYou can checkout :\n Maybelline fitme matte in 235 pure Beige\n");
+            printf("Redirecting to Face makeup menu\n");
+            break;
+
+    case 5: printf("\nYou can checkout :\n Maybelline fitme matte in 330 Toffee\n");
+            printf("Redirecting to Face makeup menu\n");
+            break;
+
+    default: printf("the option you have entered does not exist, Redirecting to Face makeup menu\n");
         return;
     }
 }
 
 // concealer
-// function complete just beautify
 void Concealer() {
     int choice;
-    printf("Enter your shade \n 1. fair 2. light 3. light to medium 4. medium 5. rich ");
+    printf("Select your shade:\n 1. fair\t 2. light\t 3. light to medium\t 4. medium\t 5. rich\n ");
     scanf("%d",&choice);
     switch (choice)
     {
-    case 1: printf("\n You can checkout :\n Maybelline New York Fitme Concealer in 10 Light \n");      // everything printf in this format
-        
-              break;
-    case 2: 
-            printf("MMaybelline New York Fitme Concealer in 15 Fair");
-        
-        
-        break;
-    case 3: 
-        printf("Maybelline New York Fitme Concealer in 20 Sand");
-        
-        
-        break;
-    case 4: 
-        printf("\n Maybelline New York Fitme Concealer in 25 Medium");
-        
-        
-        break;
-    case 5: 
-        printf("\n Maybelline New York Fitme Concealer in 35 Deep");
-        
-        break;
+    case 1: printf("\nYou can checkout :\nMaybelline New York Fitme Concealer in 10 Light\n");
+            printf("Redirecting to Face makeup menu\n");
+            break;
+
+    case 2: printf("\nYou can checkout :\nMaybelline New York Fitme Concealer in 15 Fair\n");
+            printf("Redirecting to Face makeup menu\n");
+            break;
+
+    case 3: printf("\nYou can checkout :\nMaybelline New York Fitme Concealer in 20 Sand\n");
+            printf("Redirecting to Face makeup menu\n");
+            break;
+
+    case 4: printf("\nYou can checkout :\nMaybelline New York Fitme Concealer in 25 Medium\n");
+            printf("Redirecting to Face makeup menu\n");
+            break;
+
+    case 5: printf("\nYou can checkout :\nMaybelline New York Fitme Concealer in 35 Deep\n");
+            printf("Redirecting to Face makeup menu\n");
+            break;
     
-    default: printf("the option you have entered does not exist, going back to face makeup menu");
+    default: printf("the option you have entered does not exist, Redirecting to face makeup menu\n");
         return;
     }
 }
 
 //powder
-// function complete just beautify
 void LoosePowder() {
     int choice;
-    printf("Enter your shade \n 1. fair 2. light 3. light to medium 4. medium 5. rich ");
+    printf("Select your shade:\n 1. fair\t 2. light\t 3. light to medium\t 4. medium\t 5. rich\n ");
     scanf("%d",&choice);
     switch (choice)
     {
-    case 1: printf("\n You can checkout :\n Maybelline New York Fit me Loose Finishing Powder 15 Light \n"); // everything in this format
+        case 1: printf("\nYou can checkout :\nMaybelline New York Fit me Loose Finishing Powder 15 Light \n");
+                printf("Redirecting to Face makeup menu\n");
+                break;
+
+        case 2: printf("\nYou can checkout :\nMaybelline New York Fit me Loose Finishing Powder 15 Light\n");
+                printf("Redirecting to Face makeup menu\n");
+                break;
+
+        case 3: printf("\nYou can checkout :\nMaybelline New York Fit me Loose Finishing Powder 20 Light Medium\n");
+                printf("Redirecting to Face makeup menu\n");
+                break;
+
+        case 4: printf("\nYou can checkout :\nMaybelline New York Fit me Loose Finishing Powder 25 Medium\n");
+                printf("Redirecting to Face makeup menu\n");    
+                break;
+
+        case 5: printf("\nYou can checkout :\nMaybelline New York Fit me Loose Finishing Powder 30 Medium Deep\n");
+                printf("Redirecting to Face makeup menu\n");    
+                break;
         
-        
-        break;
-    case 2: printf("Maybelline New York Fit me Loose Finishing Powder 15 Light");
-        
-        
-        break;
-    case 3: 
-        printf("Maybelline New York Fit me Loose Finishing Powder 20 Light Medium");
-        
-        
-        break;
-    case 4: 
-        printf("Maybelline New York Fit me Loose Finishing Powder 25 Medium");
-        
-        
-        break;
-    case 5: 
-        printf("Maybelline New York Fit me Loose Finishing Powder 30 Medium Deep");
-        
-        break;
-    
-    default: printf("the option you have entered does not exist, going back to face makeup menu");
-        return;
+        default: printf("the option you have entered does not exist,Redirecting to Face makeup menu\n");
+            return;
     }
 }
 
 //Blush
 void Blush() {
     int choice,pref;
-    printf("you can buy it in 3 prefernce: 1. by skin tone 2. by colour 3. blush pallete");
+    printf("You can buy it in 3 prefernces:\n1.by skin tone\n2.by colour\n3.blush pallete\n");
     scanf("%d",&pref);
-    if(pref == 1) {
-        printf("Enter your shade \n 1. fair 2. light 3. light to medium 4. medium 5. rich 6. go back to face makeup catgegory");
+    if(pref == 1) 
+    {
+        printf("Select your shade:\n 1. fair\t 2. light\t 3. light to medium\t 4. medium\t 5. rich\t\n");
         scanf("%d",&choice);
         switch (choice)
         {
-        case 1: printf("\n %s, According to your skintone, the blush best suited for you is :\n Maybelline New York Fit me Mono Blush - 20 Hopeful \n",user->name);   // every printf in this format
-            
-            
-            break;
-        case 2: printf("\n You can checkout :\n Maybelline New York Fit me Mono Blush - 30 Fierce \n");
-            
-            
-            break;
-        case 3: 
-            printf("\n You can checkout :\n Maybelline New York Fit me Mono Blush - 30 Fierce \n");
-            
-            
-            break;
-        case 4: 
-            printf("\n %s, According to your skintone, the blush best suited for you is :\n Maybelline New York Fit me Mono Blush - 50 Wine \n",user->name);
-            
-            
-            break;
-        case 5: 
-            printf("\n %s, According to your skintone, the blush best suited for you is :\n Maybelline New York Fit me Mono Blush - 60 Passionate \n",user->name);
-            
-            break;
-        case 6: printf("going back to face makeup menu");
+            case 1: printf("\nAccording to your skintone, the best blush suited for you is :\nMaybelline New York Fit me Mono Blush - 20 Hopeful \n");
+                    printf("Redirecting to Face makeup menu\n"); 
+                    break;
+
+            case 2: printf("\nAccording to your skintone, the best blush suited for you is :\n Maybelline New York Fit me Mono Blush - 30 Fierce \n");
+                    printf("Redirecting to Face makeup menu\n"); 
+                    break;
+
+            case 3: printf("\nAccording to your skintone, the best blush suited for you is :\nMaybelline New York Fit me Mono Blush - 30 Fierce \n");
+                    printf("Redirecting to Face makeup menu\n");
+                    break;
+
+            case 4: printf("\nAccording to your skintone, the best blush suited for you is :\n Maybelline New York Fit me Mono Blush - 50 Wine \n");
+                    printf("Redirecting to Face makeup menu\n");
+                    break;
+
+            case 5: printf("\nAccording to your skintone, the best blush suited for you is :\n Maybelline New York Fit me Mono Blush - 60 Passionate \n");
+                    printf("Redirecting to Face makeup menu\n");    
+                break;
+
+            default: printf("the option you have entered does not exist, Redirecting to Face makeup menu\n");
                 return;
-        default: printf("the option you have entered does not exist, going back to face makeup menu");
-            return;
         }
     }
     
-    else if(pref == 2) {
-        printf("Enter your preferred colour \n 1. coral 2. light pink 3. cool toned pink 4. deep pink 5. Nude Colour");
+    else if(pref == 2) 
+    {
+        printf("Enter your preferred colour:\n1.coral\t\t\t2.light pink\n3.cool toned pink\t4.deep pink\n5.Nude Colour\t\n");
         scanf("%d",&choice);
         switch (choice)
         {
-        case 1: printf("\n %s, You can checkout :\n Maybelline New York Fit me Mono Blush - 50 Wine \n",user->name); // everything in this format
-            
-            
-            break;
-        case 2: printf("\n %s, You can checkout :\n Maybelline New York Fit me Mono Blush - 30 Fierce \n",user->name);
-            
-            
-            break;
-        case 3: 
-            printf("\n %s, You can checkout :\n Maybelline New York Fit me Mono Blush - 40 Proud \n",user->name);
-            
-            
-            break;
-        case 4: 
-            printf("\n %s, You can checkout :\n Maybelline New York Fit me Mono Blush - 60 Passionate \n",user->name);
-            
-            
-            break;
-        case 5: 
-            printf("\n %s, You can checkout :\n Maybelline New York Fit me Mono Blush - 20 Hopeful \n",user->name);
-            
-            break;
-        case 6: printf("going back to face makeup menu");
-                return;
+        case 1: printf("\nYou can checkout :\n Maybelline New York Fit me Mono Blush - 50 Wine \n");
+                printf("Redirecting to Face makeup menu\n");
+                break;
+
+        case 2: printf("\nYou can checkout :\n Maybelline New York Fit me Mono Blush - 30 Fierce \n");
+                printf("Redirecting to Face makeup menu\n");
+                break;
+
+        case 3: printf("\nYou can checkout :\n Maybelline New York Fit me Mono Blush - 40 Proud \n");
+                printf("Redirecting to Face makeup menu\n");
+                break;
+
+        case 4:  printf("\nYou can checkout :\n Maybelline New York Fit me Mono Blush - 60 Passionate \n");
+                 printf("Redirecting to Face makeup menu\n");
+                 break;
+
+        case 5: printf("\nYou can checkout :\n Maybelline New York Fit me Mono Blush - 20 Hopeful \n");
+                printf("Redirecting to Face makeup menu\n");
+                break;
+
         default: printf("the option you have entered does not exist, going back to face makeup menu");
             return;
         }
     }
-    else if(pref ==3) {
-        printf("\n %s, You can checkout :\n Maybelline New York Face Studio Master Blush Pallete \n",user->name);
-    }
-
-    else {
-        printf("the option you have entered does not exist, going back to face makeup menu");
-    }
+    else if(pref ==3) 
+        printf("\nYou can checkout :\n Maybelline New York Face Studio Master Blush Pallete \n");
+    
+    else 
+        printf("the option you have entered does not exist,Redirecting to Face makeup menu");
 }
 
 //contour 
 void Contour() {
     int choice;
-    printf("Enter your shade \n 1. fair 2. light 3. light to medium 4. medium 5. rich ");
+    printf("Select your shade:\n 1. fair\t 2. light\t 3. light to medium\t 4. medium\t 5. rich\n ");
     scanf("%d",&choice);
     switch (choice)
     {
-    case 1: printf("\n We currently do not have Contour in singles but you can checkout our Pallete \n Maybelline New York Face Studio Master Contour Pallete in the shade - Light to Medium \n");      // everything printf in this format
+        case 1: printf("\nWe currently do not have Contour in singles but you can checkout our Pallete \n Maybelline New York Face Studio Master Contour Pallete in the shade - Light to Medium \n");
+                printf("Redirecting to Face makeup menu\n");
+                break;
+
+        case 2: printf("\nWe currently do not have Contour in singles but you can checkout our Pallete \n Maybelline New York Face Studio Master Contour Pallete in the shade - Light to Medium \n");  
+                printf("Redirecting to Face makeup menu\n");
+                break;
+
+        case 3: printf("\nWe currently do not have Contour in singles but you can checkout our Pallete \n Maybelline New York Face Studio Master Contour Pallete in the shade - Light to Medium \n");  
+                printf("Redirecting to Face makeup menu\n");
+                break;
+
+        case 4: printf("\nWe currently do not have Contour in singles but you can checkout our Pallete \n Maybelline New York Face Studio Master Contour Pallete in the shade -  Medium to Deep \n");  
+                printf("Redirecting to Face makeup menu\n");
+                break;
+
+        case 5: printf("\nWe currently do not have Contour in singles but you can checkout our Pallete \n Maybelline New York Face Studio Master Contour Pallete in the shade -  Medium to Deep \n");
+                printf("Redirecting to Face makeup menu\n");
+                break;
         
-              break;
-    case 2: 
-            printf("\n We currently do not have Contour in singles but you can checkout our Pallete \n Maybelline New York Face Studio Master Contour Pallete in the shade - Light to Medium \n");  
-        
-        
-        break;
-    case 3: 
-        printf("\n We currently do not have Contour in singles but you can checkout our Pallete \n Maybelline New York Face Studio Master Contour Pallete in the shade - Light to Medium \n");  
-        
-        
-        break;
-    case 4: 
-        printf("\n We currently do not have Contour in singles but you can checkout our Pallete \n Maybelline New York Face Studio Master Contour Pallete in the shade -  Medium to Deep \n");  
-        
-        
-        break;
-    case 5: 
-        printf("\n We currently do not have Contour in singles but you can checkout our Pallete \n Maybelline New York Face Studio Master Contour Pallete in the shade -  Medium to Deep \n");
-        
-        break;
-    
-    default: printf("the option you have entered does not exist, going back to face makeup menu");
-        return;
+        default: printf("the option you have entered does not exist,Redirecting to Face makeup menu");
+            return;
     }
 }
 
 //Highlighter
 void Highlighter() {
     int choice;
-    printf("Enter your shade \n 1. fair 2. light 3. light to medium 4. medium 5. rich ");
+    printf("Select your shade:\n 1. fair\t 2. light\t 3. light to medium\t 4. medium\t 5. rich\n ");
     scanf("%d",&choice);
     switch (choice)
     {
-    case 1: printf("\n You can checkout :\n Maybelline New York Face Studio Master Chrome Metallic Highlighter - Molten Rose Gold \n");      // everything printf in this format
-        
-              break;
-    case 2: 
-            printf("\n You can checkout :\n Maybelline New York Face Studio Master Chrome Metallic Highlighter - Molten Rose Gold \n");
-        
-        break;
-    case 3: 
-        printf("\n You can checkout :\n Maybelline New York Face Studio Master Chrome Metallic Highlighter - Molten Rose Gold \n");
-        
-        
-        break;
-    case 4: 
-        printf("\n You can checkout :\n Maybelline New York Face Studio Master Chrome Metallic Highlighter - Molten Gold \n");
-        
-        
-        break;
-    case 5: 
-        printf("\n You can checkout :\n Maybelline New York Face Studio Master Chrome Metallic Highlighter - Molten Gold \n");
-        
-        break;
+    case 1: printf("\nYou can checkout :\n Maybelline New York Face Studio Master Chrome Metallic Highlighter - Molten Rose Gold \n"); 
+            printf("Redirecting to Face makeup menu\n");
+            break;
+
+    case 2: printf("\nYou can checkout :\n Maybelline New York Face Studio Master Chrome Metallic Highlighter - Molten Rose Gold \n");
+            printf("Redirecting to Face makeup menu\n");
+            break;
+
+    case 3: printf("\nYou can checkout :\n Maybelline New York Face Studio Master Chrome Metallic Highlighter - Molten Rose Gold \n");
+            printf("Redirecting to Face makeup menu\n");
+            break;
+
+    case 4: printf("\nYou can checkout :\n Maybelline New York Face Studio Master Chrome Metallic Highlighter - Molten Gold \n");
+            printf("Redirecting to Face makeup menu\n");
+            break;
+
+    case 5: printf("\nYou can checkout :\n Maybelline New York Face Studio Master Chrome Metallic Highlighter - Molten Gold \n");
+            printf("Redirecting to Face makeup menu\n");
+            break;
     
-    default: printf("the option you have entered does not exist, going back to face makeup menu");
+    default: printf("the option you have entered does not exist,Redirecting to Face makeup menu");
         return;
     }
 }
@@ -367,238 +359,232 @@ void Highlighter() {
 //Settng spray
 void SettingSpray() {
     int choice;
-    printf("Enter your Preference \n 1. Matte finish 2. Dewy finish ");
+    printf("Enter your Preference \n1. Matte finish \n2. Dewy finish\n");
     scanf("%d",&choice);
     switch (choice)
     {
-    case 1: printf("\n You can checkout :\n Maybelline New York Fit Me Matte + Poreless Setting Spray \n or You can also checkout \n Maybelline New York Facestudio Lasting Fix Makeup Setting Spray \n ");      // everything printf in this format
-        
-              break;
-    case 2: 
-            printf("\n Sorry %s, currently we do not have a dewy setting spray, you can stay tuned for our future launches \n",user->name);
-        
-        break;
-    default: printf("the option you have entered does not exist, going back to face makeup menu");
-        return;
+        case 1: printf("\nYou can checkout :\nMaybelline New York Fit Me Matte + Poreless Setting Spray \nor\nMaybelline New York Facestudio Lasting Fix Makeup Setting Spray \n ");      // everything printf in this format
+                printf("Redirecting to Face makeup menu\n");
+                break;
+
+        case 2: printf("\nSorry %s, currently we do not have a dewy setting spray, you can stay tuned for our future launches \n",user->name);
+                printf("Redirecting to Face makeup menu\n");
+                break;
+        default: printf("the option you have entered does not exist,Redirecting to Face makeup menu");
+            return;
     }
 }
-
-//till here do it 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-void EyeMakeup() {
+//************************************************************************************************************//
+//***************************EYE MAKE UP*************************//
+//************************************************************************************************************//
+void EyeMakeup()
+{
     int choice;
     while(1) {
-        printf("heyy %s enter a category of eyemakeup \n 1. eyeliner 2. eyebrow definer 3. mascara 4. eyeshadow ",user->name);              
-         // menu me choice vs option add add karde like 1. Facemakeup 2. eyemakeup
+        printf("\nHeyy %s enter a category of eyemakeup \n1. eyeliner\t2. eyebrow definer\n3. mascara\t4. eyeshadow\n",user->name);              
         scanf("%d",&choice);
         switch (choice)
         {
-        case 1 : EyeLiner();
-            break;
-        case 2 : EyeBrowDef();
-            break;
-        case 3 : Mascara();
-            break;
-        case 4 : EyeShadow();
+            case 1 : EyeLiner();
                 break;
-        default: printf("\n the option you have entered does not exist, going back to main menu \n");
-            break;
+            case 2 : EyeBrowDef();
+                break;
+            case 3 : Mascara();
+                break;
+            case 4 : EyeShadow();
+                    break;
+            default: printf("\n the option you have entered does not exist,Redirecting to main menu \n");
+                break;
         }
     }
 }
 
 // Eye liner
-void EyeLiner() {
+void EyeLiner() 
+{
     int choice,finish,i;
-    printf("%s, choose your preferred formulation  \n 1. retractable kajal 2.kohl 3. sketch liner 4. liquid liner 5. gel liner \n");
+    printf("Choose your preferred formulation \n1. retractable kajal\t2.kohl \n3. sketch liner\t\t4. liquid liner \n5. gel liner\n");
     scanf("%d",&choice);
     switch (choice)
     {
-    case 1: printf("\n You can checkout :\n Maybelline New York The Collosal Kajal \n");      // everything printf in this format
-        
-              break;
-    case 2: 
-            printf("\n You can checkout :\n Maybelline New York Tattostudio Smokey \n"); 
-        
-        
-        break;
-    case 3: 
-        printf("\n You can checkout :\n Maybelline New York The Collosal Liner\n");
-        
-        
-        break;
-    case 4: for(i=0;i<=5;i++) {
-                if(i==5) {
-                    printf("%s, you have completed 5 unsucessful trials, going back to eye makeup menu");
+    case 1: printf("\nYou can checkout :\nMaybelline New York The Collosal Kajal \n");   
+            printf("Redirecting to Eye makeup menu\n");
+            break;
+
+    case 2: printf("\nYou can checkout :\nMaybelline New York Tattostudio Smokey \n"); 
+            printf("Redirecting to Eye makeup menu\n");
+            break;
+
+    case 3: printf("\nYou can checkout :\nMaybelline New York The Collosal Liner\n");
+            printf("Redirecting to Eye makeup menu\n");
+            break;
+
+    case 4: for(i=0;i<=5;i++) 
+            {
+                if(i==5) 
+                {
+                    printf("You have completed 5 unsucessful trials,Redirecting to eye makeup menu\n");
                     return;
                 }
-                printf("what is your perferred finish of liquid eyeliner 1. matte finish 2. glossy finish \n");
+                printf("What is your perferred finish of liquid eyeliner\n1.matte finish \n2.glossy finish \n");
                 scanf("%d",&finish);
-                if(finish == 1) {
-                    printf("\n You can checkout :\n Maybelline New York Collosal Bold Eyeliner \n"); 
+                if(finish == 1) 
+                {
+                    printf("\nYou can checkout :\nMaybelline New York Collosal Bold Eyeliner \n"); 
+                    printf("Redirecting to Eye makeup menu\n");
                     break;
                 }
-                else if(finish == 2) {
-                    printf("\n You can checkout :\n Maybelline New York Hyper Glossy Liquid Liner \n"); 
+                else if(finish == 2) 
+                {
+                    printf("\nYou can checkout :\nMaybelline New York Hyper Glossy Liquid Liner \n");
+                    printf("Redirecting to Eye makeup menu\n"); 
                     break;
                 }
-                else {
-                    printf("\n the option you have entered does not exist, please retry \n");
+                else 
+                {
+                    printf("\nThe option you have entered does not exist, please Retry");
+                    printf("Redirecting to Eye makeup menu\n");
                 }
             }   
             break;
-    case 5: 
-        printf("\n You can checkout :\n Maybelline New York Lasting Drama Gel \n");
-        
-        break;
+    case 5: printf("\n You can checkout :\nMaybelline New York Lasting Drama Gel \n");
+            printf("Redirecting to Eye makeup menu\n");
+            break;
     
-    default: printf("the option you have entered does not exist, going back to eye makeup menu");
+    default: printf("the option you have entered does not exist, Redirecting to Eye makeup menu");
         return;
     }
 }
 
 //eyebrow definer
-void EyeBrowDef() {
+void EyeBrowDef() 
+{
     int choice;
-    printf("%s, choose your preferred formulation  \n 1. retractable eyebrow definer 2.pencil eyebrow definer 3. eyebrow mascara \n",user->name);
+    printf("Choose your preferred formulation:\n1.Retractable eyebrow definer\n2.Pencil eyebrow definer \n3.Eyebrow mascara \n");
     scanf("%d",&choice);
     switch (choice)
     {
-    case 1: printf("\n You can checkout these 2 options :\n Maybelline New York Define & Blend Brow Pencil \n Maybelline New York Tattoo Brow Pencil \n");      // everything printf in this format
-        
-              break;
-    case 2: 
-            printf("\n You can checkout :\n Maybelline New York Fashion Brow Cream Pencil \n"); 
-        
-        
-        break;
-    case 3: 
-        printf("\n You can checkout :\n Maybelline New York Tattoo Brow 3 Day Styling Brow Gel \n");
-    
-        
-        break;
-    default: printf("the option you have entered does not exist, going back to eye makeup menu");
-        return;
+        case 1: printf("\nYou can checkout these 2 options :\nMaybelline New York Define & Blend Brow Pencil\nOr\nMaybelline New York Tattoo Brow Pencil \n");
+                printf("Redirecting to Eye makeup menu\n\n");
+                break;
+
+        case 2: printf("\nYou can checkout :\nMaybelline New York Fashion Brow Cream Pencil \n"); 
+                printf("Redirecting to Eye makeup menu\n\n");
+                break;
+
+        case 3: printf("\nYou can checkout :\nMaybelline New York Tattoo Brow 3 Day Styling Brow Gel \n");
+                printf("Redirecting to Eye makeup menu\n\n");
+                break;
+
+        default: printf("the option you have entered does not exist,Redirecting to eye makeup menu");
+            return;
     }
 }
 
 // mascara
-//eyebrow definer
-void Mascara() {
+void Mascara() 
+{
     int choice,finish,i;
-    printf("%s, What is your expectation from mascara, choose an option  \n 1. Curling 2.Volumnising 3. both curling and volumnising 4. false eyelash effect \n",user->name);
+    printf("%s,What is your expectation from mascara, choose an option :\n1.Curling \t2.Volumnising \n3.Both curling and volumnising\t 4.False eyelash effect \n",user->name);
     scanf("%d",&choice);
-    printf("would you prefer waterproof (enter 1) or washable (enter any number) ?  ");
+    printf("Would you prefer waterproof (enter 1) or washable (enter any number) ? ");
     scanf("%d",&finish);
     switch (choice)
     {
-    case 1: if(finish == 1) {
-                printf("\n You can checkout :\n Maybelline New York The Collosal Mascara - Waterproof ");
-            }
-            else {
-                printf("\n You can checkout :\n Maybelline New York The Collosal Volum Mascara - Washable");
-            }
-          // everything printf in this format
-        
-              break;
-    case 2: if(finish == 1) {
-                printf("\n You can checkout :\n Maybelline New York Hyper Curl Mascara - Waterproof Very Black \n");
-            }
-            else {
-                printf("\n You can checkout :\n Maybelline New York Hyper Curl Mascara - Washable Very Black");
-            }
-        
-        
-        break;
-    case 3: if(finish == 1) {
-                printf("\n You can checkout :\n Maybelline New York Lash Sensantional Waterptoof Mascara Black \n");
-            }
-            else {
-                printf("\n You can checkout :\n Maybelline New York Lash Sensantional Washable Mascara Black \n");         
-            } 
-            break;
-    case 4: if(finish == 1) {
-                printf("\n You can checkout :\n Maybelline New York Falsies Lash Lift Mascara - Very Black \n");
-            }
-            else {
-                printf("\n You can checkout :\n Maybelline New York Falsies Lash Lift Mascara - Very Black \n Unfortunately it is not available in Washable variant as of now \n");      
-            } 
-            break;
-    default: printf("the option you have entered does not exist, going back to eye makeup menu");
-        return;
+        case 1: if(finish == 1) 
+                {
+                    printf("\n You can checkout :\nMaybelline New York The Collosal Mascara - Waterproof ");
+                    printf("Redirecting to Eye makeup menu\n");
+                }
+                else 
+                {
+                    printf("\n You can checkout :\nMaybelline New York The Collosal Volum Mascara - Washable");
+                    printf("Redirecting to Eye makeup menu\n");
+                }
+                break;
+
+        case 2: if(finish == 1) 
+                {
+                    printf("\n You can checkout :\nMaybelline New York Hyper Curl Mascara - Waterproof Very Black \n");
+                    printf("Redirecting to Eye makeup menu\n");
+                }
+                else 
+                {
+                    printf("\n You can checkout :\n Maybelline New York Hyper Curl Mascara - Washable Very Black");
+                    printf("Redirecting to Eye makeup menu\n");
+                }
+                break;
+
+        case 3: if(finish == 1) 
+                {
+                    printf("\n You can checkout :\nMaybelline New York Lash Sensantional Waterptoof Mascara Black \n");
+                    printf("Redirecting to Eye makeup menu\n");
+                }
+                else 
+                {
+                    printf("\n You can checkout :\nMaybelline New York Lash Sensantional Washable Mascara Black \n");
+                    printf("Redirecting to Eye makeup menu\n");         
+                } 
+                break;
+
+        case 4: if(finish == 1) 
+                {
+                    printf("\n You can checkout :\nMaybelline New York Falsies Lash Lift Mascara - Very Black \n");
+                    printf("Redirecting to Eye makeup menu\n");
+                }
+                else
+                {
+                    printf("\n You can checkout :\nMaybelline New York Falsies Lash Lift Mascara - Very Black \nUnfortunately it is not available in Washable variant as of now \n");      
+                    printf("Redirecting to Eye makeup menu\n");
+                } 
+                break;
+
+        default: printf("the option you have entered does not exist, Redirecting to eye makeup menu\n");
+            return;
     }
 }
 
 
 //eyeshadow
-void EyeShadow() {
+void EyeShadow() 
+{
     int choice,finish,i;
-    printf("%s, What is your preference for colour story in eyeshadow palette, choose an option  \n 1. Browns 2.Pinks \n",user->name);
+    printf("%s, What are your preferences for colour story in eyeshadow palette, choose an option:  \n1. Browns \n2.Pinks \n",user->name);
     scanf("%d",&choice);
     switch (choice)
     {
-    case 1: printf("\n You can checkout :\n Maybelline New York City Mini Palette Eye Shadow ");
-            
-          // everything printf in this format
+        case 1: printf("\n You can checkout :\nMaybelline New York City Mini Palette Eye Shadow ");
+                printf("Redirecting to Eye makeup menu\n");
+                break;
+
+        case 2: printf("\n You can checkout :\nMaybelline New York The Blushed Nudes Eye Shadow Palette \n");
+                printf("Redirecting to Eye makeup menu\n");
+            break;
+        default: printf("the option you have entered does not exist,Redirecting to eye makeup menu");
+            return;
         
-              break;
-    case 2: printf("\n You can checkout :\n Maybelline New York The Blushed Nudes Eye Shadow Palette \n");
-            
-                   
-        
-        break;
-    default: printf("the option you have entered does not exist, going back to eye makeup menu");
-        return;
-    
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//************************************************************************************************************//
+//***************************LIP MAKE UP*************************//
+//************************************************************************************************************//
 void LipMakeup() {
     int choice;
         while(1) {
-        printf("heyy %s, which type of lipstick do you want \n 1. liquid lipstick 2. ",user->name);               // menu me choice vs option add add karde like 1. Facemakeup 2. eyemakeup
+        printf("\nHeyy %s, which type of lipstick do you want \n1.Liquid lipstick\t2.BulletLipstick \n3.LipLiner \t\t4.LipGloss\n",user->name);    
         scanf("%d",&choice);
         switch (choice)
         {
-        case 1 : LiquidLipstick();
-            break;
-        case 2 : BulletLipstick();
-            break;
-        case 3 : LipLiner();
-            break;
-        case 4 : LipGloss();
-            break;
-        default: printf("\n the option you have entered does not exist, going back to eye makeup menu \n");
-            break;
+            case 1 : LiquidLipstick();
+                break;
+            case 2 : BulletLipstick();
+                break;
+            case 3 : LipLiner();
+                break;
+            case 4 : LipGloss();
+                break;
+            default: printf("\n The option you have entered does not exist, Redirecting to Lip makeup menu \n");
+                break;
         }
     }
 }
@@ -606,41 +592,35 @@ void LipMakeup() {
 //Liquid Lipstick
 void LiquidLipstick() {
      int choice;
-    printf("%s, What is your preferred colour, choose an option  \n 1. Brown 2.Pink 3.red 4. nude 5. wine 6. purple \n",user->name);
+    printf("What is your preferred colour, choose an option  \n1.Brown\t\t2.Pink \t\t3.Red \n4.Nude \t\t5.Wine \t\t6.Purple \n");
     scanf("%d",&choice);
     switch (choice)
     {
-    case 1: printf("You can checkout :\n Maybelline New York Super Stay Matte Ink Liquid Lipstick - 135 Globe Trotter \n");
-            
-          // everything printf in this format
-        
-              break;
-    case 2: printf("\n You can checkout :\n Maybelline New York Super Stay Matte Ink Liquid Lipstick - 120 Artist \n");
-            
-                   
-        
-        break;
-    case 3 : printf("\n You can checkout :\n Maybelline New York Super Stay Matte Ink Liquid Lipstick - 20 Pioneer \n");
-            
-                   
-        
-        break;
-    case 4 : printf("\n You can checkout :\n MMaybelline New York Super Stay Matte Ink Liquid Lipstick - 70 Amazonian \n");
-            
-                   
-        
-        break;
-    case 5 : printf("\n You can checkout :\n Maybelline New York Super Stay Matte Ink Liquid Lipstick - 50 Voyager \n");
-            
-                   
-        
-        break;
-    case 6: printf("You can checkout :\n Maybelline New York Super Stay Matte Ink Liquid Lipstick - 15 Lover \n");
-            
-          // everything printf in this format
-        
-              break;
-    default: printf("the option you have entered does not exist, going back to lip makeup menu");
+    case 1: printf("\nYou can checkout :\nMaybelline New York Super Stay Matte Ink Liquid Lipstick - 135 Globe Trotter \n");
+            printf("Redirecting to Lip makeup menu\n");
+            break;
+
+    case 2: printf("\nYou can checkout :\nMaybelline New York Super Stay Matte Ink Liquid Lipstick - 120 Artist \n");
+            printf("Redirecting to Lip makeup menu\n");
+            break;
+
+    case 3 : printf("\nYou can checkout :\nMaybelline New York Super Stay Matte Ink Liquid Lipstick - 20 Pioneer \n");
+             printf("Redirecting to Lip makeup menu\n");
+             break;
+
+    case 4 : printf("\nYou can checkout :\nMaybelline New York Super Stay Matte Ink Liquid Lipstick - 70 Amazonian \n");
+             printf("Redirecting to Lip makeup menu\n");
+             break;
+
+    case 5 : printf("\nYou can checkout :\nMaybelline New York Super Stay Matte Ink Liquid Lipstick - 50 Voyager \n");
+             printf("Redirecting to Lip makeup menu\n");
+            break;
+
+    case 6: printf("\nYou can checkout :\nMaybelline New York Super Stay Matte Ink Liquid Lipstick - 15 Lover \n");
+            printf("Redirecting to Lip makeup menu\n");
+            break;
+
+    default: printf("the option you have entered does not exist,Redirecting to lip makeup menu");
         return;
     
     }
@@ -649,41 +629,35 @@ void LiquidLipstick() {
 // bullet lipstick
 void BulletLipstick() {
     int choice;
-    printf("%s, What is your preferred colour, choose an option  \n 1. Brown 2.Pink 3.red 4. nude 5. wine 6. purple \n",user->name);
+    printf("What is your preferred colour, choose an option  \n1.Brown\t\t2.Pink \t\t3.Red \n4.Nude \t\t5.Wine \t\t6.Purple \n");
     scanf("%d",&choice);
     switch (choice)
     {
-    case 1: printf("You can checkout :\n Maybelline New York Color Sensational Creamy Matte Lipstick - 676 East Village Rose \n");
-            
-          // everything printf in this format
-        
-              break;
-    case 2: printf("\n You can checkout :\n Maybelline New York Color Sensational Creamy Matte Lipstick - 680 Mesmerizing Magenta \n");
-            
-                   
-        
-        break;
-    case 3 : printf("\n You can checkout :\n Maybelline New York Color Sensational Creamy Matte Lipstick - 690 Siren in Scarlet \n");
-            
-                   
-        
-        break;
-    case 4 : printf("\n You can checkout :\n MMaybelline New York Color Sensational Creamy Matte Lipstick - 660 Touch of Spice \n");
-            
-                   
-        
-        break;
-    case 5 : printf("\n You can checkout :\n Maybelline New York Color Sensational Creamy Matte Lipstick - 691 Rich Ruby \n");
-            
-                   
-        
-        break;
-    case 6: printf("You can checkout :\n Maybelline New York Color Sensational Creamy Matte Lipstick - 808 Plum Perfection \n");
-            
-          // everything printf in this format
-        
-              break;
-    default: printf("the option you have entered does not exist, going back to lip makeup menu");
+    case 1: printf("\nYou can checkout :\nMaybelline New York Color Sensational Creamy Matte Lipstick - 676 East Village Rose \n");
+            printf("Redirecting to Lip makeup menu\n");
+            break;
+
+    case 2: printf("\nYou can checkout :\nMaybelline New York Color Sensational Creamy Matte Lipstick - 680 Mesmerizing Magenta \n");
+            printf("Redirecting to Lip makeup menu\n");
+            break;
+
+    case 3 : printf("\nYou can checkout :\nMaybelline New York Color Sensational Creamy Matte Lipstick - 690 Siren in Scarlet \n");
+             printf("Redirecting to Lip makeup menu\n");
+            break;
+
+    case 4 : printf("\nYou can checkout :\nMaybelline New York Color Sensational Creamy Matte Lipstick - 660 Touch of Spice \n");
+             printf("Redirecting to Lip makeup menu\n");
+             break;
+
+    case 5 : printf("\nYou can checkout :\nMaybelline New York Color Sensational Creamy Matte Lipstick - 691 Rich Ruby \n");
+             printf("Redirecting to Lip makeup menu\n");
+             break;
+
+    case 6: printf("You can checkout :\nMaybelline New York Color Sensational Creamy Matte Lipstick - 808 Plum Perfection \n");
+            printf("Redirecting to Lip makeup menu\n");
+            break;
+
+    default: printf("the option you have entered does not exist, Redirecting to lip makeup menu\n");
         return;
     
     }
@@ -692,39 +666,35 @@ void BulletLipstick() {
 // lip liner
 void LipLiner() {
     int choice;
-    printf("%s, What is your preferred colour, choose an option  \n 1. Brown 2.Pink 3.red 4. nude 5. wine 6. purple \n",user->name);
+    printf("What is your preferred colour, choose an option  \n1.Brown\t\t2.Pink \t\t3.Red \n4.Nude \t\t5.Wine \t\t6.Purple \n");
     scanf("%d",&choice);
     switch (choice)
     {
-    case 1: printf("You can checkout :\n Maybelline New York Color Sensational Lip Liner - Rich Chocolate \n");
-            
-          // everything printf in this format
-        
-              break;
-    case 2: printf("\n You can checkout :\n Maybelline New York Color Sensational Lip Liner - Pink Corral \n");
-            
-                   
-        
-        break;
-    case 3 : printf("\n You can checkout :\n Maybelline New York Color Sensational Lip Liner - Brick Red \n");
-            
-                   
-        
-        break;
-    case 4 : printf("\n You can checkout :\n Maybelline New York Color Sensational Lip Liner Creme Finish - Nude Whisper \n");
-            
-                   
-        
-        break;
-    case 5 : printf("\n You can checkout :\n Maybelline New York Color Sensational Lip Liner - Rich Wine \n");
-            
-                   
-        
-        break;
+    case 1: printf("\nYou can checkout :\nMaybelline New York Color Sensational Lip Liner - Rich Chocolate \n");
+            printf("Redirecting to Lip makeup menu\n");
+            break;
+
+    case 2: printf("\nYou can checkout :\nMaybelline New York Color Sensational Lip Liner - Pink Corral \n");
+            printf("Redirecting to Lip makeup menu\n");
+            break;
+
+    case 3 : printf("\nYou can checkout :\nMaybelline New York Color Sensational Lip Liner - Brick Red \n");
+            printf("Redirecting to Lip makeup menu\n");
+            break;
+
+    case 4 : printf("\nYou can checkout :\nMaybelline New York Color Sensational Lip Liner Creme Finish - Nude Whisper \n");
+             printf("Redirecting to Lip makeup menu\n");
+            break;
+
+    case 5 : printf("\nYou can checkout :\nMaybelline New York Color Sensational Lip Liner - Rich Wine \n");
+             printf("Redirecting to Lip makeup menu\n");
+             break;
+
     case 6: printf("\n You can checkout :\n Maybelline New York Color Sensational Lip Liner - Magnetic Mauve \n");
-        
-              break;
-    default: printf("the option you have entered does not exist, going back to lip makeup menu");
+            printf("Redirecting to Lip makeup menu\n");
+            break;
+
+    default: printf("the option you have entered does not exist,Redirecting to lip makeup menu");
         return;
     
     }
@@ -733,31 +703,26 @@ void LipLiner() {
 //lip gloss 
 void LipGloss() {
     int choice;
-    printf("%s, What is your preferred colour, choose an option  \n 1. Clear 2.Pink 3.Brown 4. nude \n",user->name);
+    printf("%s, What is your preferred colour, choose an option  \n1.Clear \t\t2.Pink \n3.Brown \t\t4.Nude \n",user->name);
     scanf("%d",&choice);
     switch (choice)
     {
-    case 1: printf("You can checkout :\n Maybelline New York Lifter Gloss - Pearl \n");
-            
-          // everything printf in this format
-        
-              break;
-    case 2: printf("\n You can checkout :\n Maybelline New York Lifter Gloss - Petal \n");
-            
-                   
-        
-        break;
-    case 3 : printf("\n You can checkout :\n Maybelline New York Lifter Gloss - Topaz \n");
-            
-                   
-        
-        break;
-    case 4 : printf("\n You can checkout :\n Maybelline New York Lifter Gloss - Moon \n");
-            
-                   
-        
-        break;
-    default: printf("the option you have entered does not exist, going back to lip makeup menu");
+    case 1: printf("\nYou can checkout :\nMaybelline New York Lifter Gloss - Pearl \n");
+            printf("Redirecting to Lip makeup menu\n");
+            break;
+
+    case 2: printf("\nYou can checkout :\nMaybelline New York Lifter Gloss - Petal \n");
+            printf("Redirecting to Lip makeup menu\n");
+            break;
+
+    case 3 : printf("\nYou can checkout :\nMaybelline New York Lifter Gloss - Topaz \n");
+            printf("Redirecting to Lip makeup menu\n");
+            break;
+    case 4 : printf("\nYou can checkout :\nMaybelline New York Lifter Gloss - Moon \n");
+            printf("Redirecting to Lip makeup menu\n");
+            break;
+
+    default: printf("the option you have entered does not exist,Redirecting to lip makeup menu");
         return;
     
     }
